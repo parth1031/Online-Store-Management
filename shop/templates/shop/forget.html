@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css\login style.css' %}" />
+  </head>
+  <body>
+    {% if messages %}
+        {% for message in messages %}
+          <div class= "alert alert-primary" role="alert" >
+            {{ message }}
+          </div>
+        {% endfor %}
+    {% endif %}
+    <!-- partial:index.partial.html -->
+    <div class="box-form">
+      <div class="left">
+        <div class="overlay">
+          <h1>Tech Mart</h1>
+          <!-- name to be given -->
+          <p>
+            Welcome to our platform! You need to login before you can shop your
+            favourite gadgets from us.
+          </p>
+          <span>
+            
+          </span>
+        </div>
+      </div>
+
+      <div class="right">
+        <form method="post" action="{% url 'forget' %}">
+          <h5>Forget</h5>
+          {% csrf_token %}
+          <p>Don't have an account? <a href="{% url 'signup' %}">Create Your Account</a></p>
+          <div class="inputs">
+          <input type="text" placeholder="user name" name="username" >
+          <br />
+          <input type="text" placeholder="phone number" name="phone" >
+          <br />
+          <input type="text" placeholder="security key" name="key" >
+          <br />
+          <input type="password" placeholder=" Password" name="password1" >
+          <br />
+          <input type="password" placeholder="Confirm Password" name="password2" >
+          
+         </div>
+
+          <br /><br />
+
+        <div class="remember-me--forget-password">
+          
+          <p>Remember your password? <a href="{% url 'login' %}">login</a></p>
+        </div>
+
+        <br />
+        <button type=submit >change password</button>
+        </form>
+
+      </div>
+    </div>
+    <!-- partial -->
+  </body>
+</html>

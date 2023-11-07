@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+    />
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    {% endblock %}
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700|Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-+qUc1WPUB8t5CwKBUqF0+2Q1Z2i1evxAuST+Hl6BdBBG2I+fPBbvW8ZRlV1cJZ5pmwAWqUxjqgdwBxWiKegxFw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+
+
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="{% url 'home' %}">
+            <img
+              src="{% static 'images/36027247.jpg' %}"
+              id="logo_img"
+              alt="Logo"
+              class="logo"
+            />
+          </a>
+          <a style="text-decoration: none" href="{% url 'home' %}"><span class="navbar-text"> Tech-Mart </span></a>
+
+          <form class="d-flex mx-auto" action="{% url 'search' %}">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search here for products"
+              aria-label="Search"
+              name="search"
+            />
+            <button class="btn btn-outline-primary" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+          <div class="navbar-nav">
+            <div class="account-dropdown">
+              <a class="nav-link account-link" href="#">
+                <i class="bi bi-person"></i>
+              </a>
+              <div class="dropdown-content">
+                <a href="{% url 'login' %}">Log In <i class="bi bi-box-arrow-in-right"></i></a>
+                <br />
+                <a href="{% url 'logout' %}">Log out <i class="bi bi-box-arrow-in-left"></i></a>
+              </div>
+            </div>
+            <a class="nav-link wishlist-link" href="{% url 'wishlist' %}">
+              <i class="bi-heart"></i>
+            </a>
+            <a class="nav-link cart-link" href="{% url 'cart' %}">
+              <i class="bi-cart"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    {% block body %}{% endblock %}
+
+     <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h3 class="footer-title">Electronics Hub</h3>
+            <p class="footer-text">
+              Your one-stop destination for the latest in electronics and
+              technology.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <h3 class="footer-title">Contact Us</h3>
+            <p class="footer-text">
+              Email: info@electronicshub.com<br />Phone: +123 456 789
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

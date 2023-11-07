@@ -1,0 +1,52 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+
+{% block title %}Wishlist{% endblock %}
+{% block body%}
+    <section class="h-100" style="background-color: #eee;">
+        <div class="container h-100 py-5">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-10">
+
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h3 class="fw-normal mb-0 text-black">Wishlist</h3>
+                    </div>
+
+                    {% for wishlist_item in wishlist_items %}
+                        <div class="card rounded-3 mb-4">
+                            <div class="card-body p-4">
+                                <div class="row d-flex justify-content-between align-items-center">
+                                    <div class="col-md-2 col-lg-2 col-xl-2">
+                                        <img src="{{ wishlist_item.product.image.url }}"
+                                            class="img-fluid rounded-3" alt="{{ wishlist_item.product.product_name }}">
+                                    </div>
+                                    <div class="col-md-3 col-lg-3 col-xl-3">
+                                        <p class="lead fw-normal mb-2">{{ wishlist_item.product.product_name }}</p>
+                                        <p><span class="text-muted">Category: </span>{{ wishlist_item.product.category }}
+
+                                    </div>
+
+                                    <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                                        <h5 class="mb-0">{{ wishlist_item.price }}</h5>
+                                    </div>
+                                    <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                                        <a href="{% url 'delete_from_wishlist' wishlist_item.product.product_id %}"
+                                            class="text-danger"><i class="bi bi-trash-fill"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="{% url 'move_all_to_cart' %}"><button type="button" class="btn btn-warning btn-block btn-lg">Add to Cart</button></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

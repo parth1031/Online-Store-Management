@@ -1,0 +1,244 @@
+
+
+
+
+/* Navbar Styles */
+
+.header {
+    background-color: #FFFFFF;
+    padding: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* .navbar {
+    justify-content: space-between;
+} */
+
+.navbar-brand {
+    display: flex;
+    /* align-items: center; */
+}
+.navbar-text{
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+
+
+}
+
+#logo_img {
+    width: 100px;
+    height: 100px;
+    object-fit: fill;
+    left:0;
+}
+
+.search-wishlist-cart {
+    display: flex;
+
+}
+
+.form-control {
+    background-color: #E3E6E6;
+    color: #000000;
+    border-radius: 20px;
+    width:600px;
+
+}
+
+.btn-outline-primary {
+    color: #FFD814;
+    border-color: #FFD814;
+}
+.btn-outline-primary:hover{
+    background-color: #FFD814;
+    transition:0.7s;
+    border-color: #000000;
+}
+
+.wishlist-link,
+.cart-link,
+.account-link {
+    color: #000000;
+    margin-left: 20px;
+    font-size: 20px;
+    position: relative;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Show the dropdown menu on hover */
+.account-link:hover + .dropdown-content {
+    display: block;
+}
+
+/* Adjusting position of the dropdown content */
+.dropdown-content {
+    top: 40px;
+    padding:10px
+  }
+/* Add a bit more space between the options */
+.dropdown-content a {
+    display: block;
+    padding: 8px 16px;
+    color: #333; /* Adjust font color */
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+/* Style the links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+/* Change the styles to ensure the dropdown remains visible when hovering */
+.navbar-nav .nav-item:hover .dropdown-content,
+.dropdown-content:hover {
+    display: block;
+}
+
+/* Ensure icons are vertically centered */
+.navbar-nav .nav-link i {
+    vertical-align: middle;
+}
+
+.footer {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 40px 0;
+}
+
+
+.btn-primary {
+    background-color: #FFD814;
+    border-color: #FFD814;
+    color: #000000;
+}
+.btn-primary:hover {
+    background-color: #FFD814;
+    border-color: #FFD814;
+    color: #000000;
+}
+
+
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid #E3E6E6;
+    margin-bottom: 20px;
+    transition: 0.4s;
+}
+.card-img-top {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+}
+
+.card-title {
+    color: #000000;
+}
+
+.card-text {
+    color: #6c757d;
+}
+
+
+/* Center headings of main sections */
+.card-title{
+    text-align: center;
+}
+
+
+/* Add this CSS for the hover effect on card images */
+.card:hover{
+    transform: scale(1.05);
+
+
+}
+
+/* Add these styles to your existing CSS file */
+.sliding-section {
+
+    padding: 80px 0;
+    background-color: #FFFFFF;
+  }
+
+
+
+  .carousel_inner {
+    position: relative;
+  }
+
+  .carousel_inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: linear-gradient(90deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100%);
+    pointer-events: none;
+  }
+/* Add these styles to your existing CSS file */
+.sliding-section {
+    width: 100%; /* Set the desired width */
+
+
+    margin: auto; /* Center the section */
+    overflow: hidden; /* Hide overflowing content */
+
+}
+
+.carousel_item {
+    transition: transform 0.5s ease; /* Add transition for smooth sliding */
+
+}
+.carousel_item_img {
+
+    object-fit: cover;
+  }
+
+.carousel_inner {
+    display: flex; /* Display items in a row */
+    width: 300%; /* Set the total width to accommodate all items */
+}
+#carouselExample .carousel_item img{
+    object-fit:cover;
+    object-position: center;
+    overflow:hidden;
+    height: 180vh;
+}
+
+#img-container{
+    height:80vh;
+    width:100%;
+
+}
+#product-image{
+    height:80vh;
+    width:100%;
+
+}
+.product-details{
+    margin:100px;
+
+}
+.product-details h5{
+    padding-top: 10px;
+}
+
+.product-details h4{
+    padding-top:20px;
+}
+#product-p{
+    padding-top:20px;
+}
+#carousel-heading{
+    margin:50px;
+    padding-left:20%;
+
+}
+

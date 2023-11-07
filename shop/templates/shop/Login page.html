@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    {% load static %}
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'css/login style.css' %}" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div class="box-form">
+      <div class="left">
+        <div class="overlay">
+          <h1>Tech Mart</h1>
+          <!-- name to be given -->
+          <p>
+            Welcome to our platform! You need to login before you can shop your
+            favourite gadgets from us.
+          </p>
+          <span>
+            
+          </span>
+        </div>
+      </div>
+
+      <div class="right">
+        <form method="post", action="{% url 'login' %}">
+        <h5>Login</h5>
+          {% csrf_token %}
+        <p>Don't have an account? <a href="{% url 'signup' %}">Create Your Account</a></p>
+        <div class="inputs">
+          <input type="text" placeholder="user name" name="username" />
+          <br />
+          <input type="password" placeholder="password" name="pass" />
+        </div>
+        <div class="remember-me--forgot-password">
+          <p>Don't remember your password? <a href="{% url 'forget' %}">Forgot password</a></p>
+        </div> 
+        <br /><br />
+
+        
+        <br />
+        <button type="submit">Login</button>
+      </div>
+    </div>
+    <!-- partial -->
+  </body>
+</html>

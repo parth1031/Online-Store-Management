@@ -1,0 +1,157 @@
+/* Navbar Styles */
+
+.header {
+    background-color: #FFFFFF;
+    padding: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* .navbar {
+    justify-content: space-between;
+} */
+
+.navbar-brand {
+    display: flex;
+    /* align-items: center; */
+}
+.navbar-text{
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+
+
+}
+
+#logo_img {
+    width: 100px;
+    height: 100px;
+    object-fit: fill;
+    left:0;
+}
+
+.search-wishlist-cart {
+    display: flex;
+
+}
+
+.form-control {
+    background-color: #E3E6E6;
+    color: #000000;
+    border-radius: 20px;
+    width:600px;
+
+}
+
+.btn-outline-primary {
+    color: #FFD814;
+    border-color: #FFD814;
+}
+.btn-outline-primary:hover{
+    background-color: #FFD814;
+    transition:0.7s;
+    border-color: #000000;
+}
+
+.wishlist-link,
+.cart-link,
+.account-link {
+    color: #000000;
+    margin-left: 20px;
+    font-size: 20px;
+    position: relative;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Show the dropdown menu on hover */
+.account-link:hover + .dropdown-content {
+    display: block;
+}
+
+/* Adjusting position of the dropdown content */
+.dropdown-content {
+    top: 40px;
+    padding:10px
+  }
+/* Add a bit more space between the options */
+.dropdown-content a {
+    display: block;
+    padding: 8px 16px;
+    color: #333; /* Adjust font color */
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+/* Style the links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+/* Change the styles to ensure the dropdown remains visible when hovering */
+.navbar-nav .nav-item:hover .dropdown-content,
+.dropdown-content:hover {
+    display: block;
+}
+
+/* Ensure icons are vertically centered */
+.navbar-nav .nav-link i {
+    vertical-align: middle;
+}
+
+.footer {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 40px 0;
+}
+
+.btn-primary {
+    background-color: #FFD814;
+    border-color: #FFD814;
+    color: #000000;
+}
+
+
+@media (min-width: 1025px) {
+.h-custom {
+
+}
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+font-size: 1rem;
+line-height: 2.15;
+padding-left: .75em;
+padding-right: .75em;
+}
+
+.card-registration .select-arrow {
+top: 13px;
+}
+
+.bg-grey {
+background-color: #eae8e8;
+}
+
+@media (min-width: 992px) {
+.card-registration-2 .bg-grey {
+border-top-right-radius: 16px;
+border-bottom-right-radius: 16px;
+}
+}
+
+@media (max-width: 991px) {
+.card-registration-2 .bg-grey {
+border-bottom-left-radius: 16px;
+border-bottom-right-radius: 16px;
+}
+}
+.btn-primary:hover{
+    background-color: #FFD814;
+    border-color: #FFD814;
+    color: #000000;
+}
